@@ -6,14 +6,49 @@ module.exports = {
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
-      { text: "Guide", link: "/guide/" }
+      { text: "Work", link: "/work/" },
+      { text: "Code", link: "/code/" },
+      { text: "Clients", link: "/clients/" }
     ],
     sidebar: {
-      "/guide/": [
+      "/work/": [
         {
-          title: "Guide",
+          title: "Working at Ample",
           collapsable: false,
-          children: ["/guide/", "/guide/getting-started/"]
+          children: [
+            ["/work/", "Overview"],
+            "/work/setup/",
+            "/work/project-start/",
+            "/work/project-work/",
+            "/work/project-end/"
+          ]
+        }
+      ],
+      "/code/": [
+        {
+          title: "Writing Code",
+          collapsable: false,
+          children: [
+            ["/code/", "Overview"],
+            "/code/dev-concepts/",
+            "/code/syntax-styleguides/",
+            "/code/working-with-gatsby/",
+            "/code/testing/",
+            "/code/data-architecture/",
+            "/code/component-architecture/"
+          ]
+        }
+      ],
+      "/clients/": [
+        {
+          title: "Our Clients",
+          collapsable: false,
+          children: [
+            ["/clients/", "Overview"],
+            "/clients/crossroads/",
+            "/clients/patient-point/",
+            "/clients/kroger/"
+          ]
         }
       ]
     }
