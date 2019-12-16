@@ -4,7 +4,7 @@ heroImage: /ample-logo.svg
 heroText: Dev Playbook
 tagline: We're Ample developers. This is how we do work.
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /work/
 features:
   - title: Thing 1
     details: And why it's awesome
