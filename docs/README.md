@@ -1,17 +1,17 @@
 ---
 home: true
-heroImage: /hero.png
-heroText: Hero Title
-tagline: Hero subtitle
+heroImage: /ample-logo.svg
+heroText: Dev Playbook
+tagline: We're Ample developers. This is how we do work.
 actionText: Get Started →
 actionLink: /guide/
 features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
+  - title: Thing 1
+    details: And why it's awesome
+  - title: Thing 2
+    details: And why it's awesome
+  - title: Thing 3
+    details: And why it's awesome
 footer: MIT Licensed | Copyright © 2019-present Ample, LLC
 ---
 
