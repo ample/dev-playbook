@@ -1,6 +1,4 @@
 # Syntax Styleguides
 
-TODO:
-
-- JavaScript (Prettier)
-- CSS (Stylelint)
+TODO: JavaScript (Prettier)
+TODO: CSS (Stylelint)

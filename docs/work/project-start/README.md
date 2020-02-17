@@ -1,16 +1,18 @@
 # Starting a New Project
 
-TODO:
+TODO: Gatsby ...
+TODO: Starter kit
+TODO: Theme library
+TODO: (other conventions in the code guide)
 
-- Gatsby
-  - Starter kit
-  - Theme library
-  - (other conventions in the code guide)
-- GitHub
-- Netlify
-  - Hosting
-  - CI/CD
-  - Forms
-  - Functions
-- Content Management System
-- Algolia
+TODO: GitHub
+
+TODO: Netlify ...
+TODO: Hosting
+TODO: CI/CD
+TODO: Forms
+TODO: Functions
+
+TODO: Content Management System
+
+TODO: Algolia

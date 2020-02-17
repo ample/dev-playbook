@@ -1,6 +1,4 @@
 # Launching a Project
 
-TODO:
-
-- Pre-launch checklist
-- Launch - DNS, Netlify, etc.
+TODO: Pre-launch checklist
+TODO: Launch - DNS, Netlify, etc.

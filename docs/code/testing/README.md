@@ -1,6 +1,4 @@
 # Testing
 
-TODO:
-
-- Visual
-- Functional / Unit
+TODO: Visual
+TODO: Functional / Unit

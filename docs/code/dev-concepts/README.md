@@ -1,6 +1,4 @@
 # Dev Concepts
 
-TODO:
-
-- Convention over configuration
-- Semantic code — write for someone else
+TODO: Convention over configuration
+TODO: Semantic code — write for someone else

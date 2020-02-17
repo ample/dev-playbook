@@ -1,15 +1,19 @@
 # How We Work
 
-TODO:
+TODO: Overview ...
+TODO: (how we communicate)
+TODO: (when/how to ask for help)
 
-- Overview
-  - (how we communicate)
-  - (when/how to ask for help)
-- Paymo
-  - Task management
-  - Defect process
-- Slack
-- Standup
-- JAM Sessions
-- Paired Programming
-- Code Reviews
+TODO: Paymo ...
+TODO: Task management
+TODO: Defect process
+
+TODO: Slack
+
+TODO: Standup
+
+TODO: JAM Sessions
+
+TODO: Paired Programming
+
+TODO: Code Reviews

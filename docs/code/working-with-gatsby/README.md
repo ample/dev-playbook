@@ -1,8 +1,6 @@
 # Working with Gatsby
 
-TODO:
-
-- Starter Kit
-- Directory Structure
-- Global Styles
-- Component Library (Theme)
+TODO: Starter Kit
+TODO: Directory Structure
+TODO: Global Styles
+TODO: Component Library (Theme)

@@ -1,13 +1,12 @@
 # Computer & Environment Setup
 
-TODO:
+TODO: VS Code
+TODO: Google (email, calendar, docs, etc.)
+TODO: Slack
+TODO: 1 Password
 
-- VS Code
-- Google (email, calendar, docs, etc.)
-- Slack
-- 1 Password
-- Environment
-  - xcode dev tools
-  - direnv
-  - rbenv
-  - nvm
+TODO: Environment ...
+TODO: xcode dev tools
+TODO: direnv
+TODO: rbenv
+TODO: nvm
