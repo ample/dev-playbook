@@ -4,6 +4,10 @@ module.exports = {
   port: 8000,
   head: [["link", { rel: "icon", href: "/favicon.png" }]],
   themeConfig: {
+    docsRepo: "ample/dev-playbook",
+    docsDir: "docs",
+    editLinks: true,
+    editLinkText: "Make this page better",
     nav: [
       { text: "Home", link: "/" },
       { text: "Work", link: "/work/" },
