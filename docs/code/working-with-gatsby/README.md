@@ -188,7 +188,7 @@ These are a collection of styles and style utilities that are shared across all 
 
 The starter kit comes with a command-line script for generating components, sections, and templates. At this time, the script is super simple and will copy the default set of files into the appropriate directory. The command looks like this:
 
-    $ ./bin/generate.js [component|section|template] [NAME]
+    $ ./.bin/generate.js [component|section|template] [NAME]
 
 ## Documentation
 
