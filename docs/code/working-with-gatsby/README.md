@@ -25,46 +25,27 @@ Our projects start with a handful of source directories that each play a specifi
 ```
 src/
 ├── components/
-│   └── [component-name]/
-│       ├── index.js
-│       ├── notes.mdx
-│       ├── styles.module.scss
-│       └── test.spec.js
 ├── fragments/
-│   └── [object-type]-attributes.js
 ├── helpers/
-│   ├── index.js
-│   ├── [helper-name].js
-│   └── [helper-name].spec.js
 ├── images/
-│   └── [image-name].[ext]
+├── layout/
 ├── sections/
-│   └── [section-name]/
-│       ├── index.js
-│       ├── notes.mdx
-│       ├── styles.module.scss
-│       └── test.spec.js
 ├── styles/
-|   ├── global/
-|   |   └── [name].scss
-|   ├── global-styles.scss
-|   ├── global-utilities.scss
-|   └── libs/
-|       ├── docz.scss
-|       └── sanitize.scss
-|
 └── templates/
-    └── [template-name]/
-        ├── adapter.js
-        ├── index.js
-        ├── notes.mdx
-        ├── styles.module.scss
-        └── test.spec.js
 ```
 
-Let's look through them, a bit out of order ...
+Let's take a tour through each of them (a little out of order) ...
 
 ### Components
+
+```
+components/
+└── [component-name]/
+    ├── index.js
+    ├── notes.mdx
+    ├── styles.module.scss
+    └── test.spec.js
+```
 
 A [component](https://reactjs.org/docs/components-and-props.html) is an independent, reusable part of the UI. They come in many shapes and sizes — components can be nested within components (more on this below). A button is a component, just as a card (which may contain a button) can also be a component.
 
@@ -84,17 +65,25 @@ When that happens, you can nest the component _within_ the original component's 
 For example, consider a header component. Say it has a logo, but the logo is also used in the footer. But say it also has a nav menu, but that isn't used elsewhere in the project. In that case, the directory structure might look something like this:
 
 ```
-src/
-└── components
-    ├── header/
-    |   ├── mobile-menu/
-    |   |   └── ...
-    |   └── ...
-    └── logo/
-        └── ...
+components/
+├── header/
+|   ├── mobile-menu/
+|   |   └── ...
+|   └── ...
+└── logo/
+    └── ...
 ```
 
 ### Sections
+
+```
+sections/
+└── [section-name]/
+    ├── index.js
+    ├── notes.mdx
+    ├── styles.module.scss
+    └── test.spec.js
+```
 
 Okay, here's where it gets weird. _Sections_ are also components. The difference is they are considered building blocks for templates and are made up of components.
 
@@ -104,13 +93,46 @@ Sections each get their own directory that models after the component directory.
 
 ### Templates
 
+```
+templates/
+└── [template-name]/
+    ├── adapter.js
+    ├── index.js
+    ├── notes.mdx
+    ├── styles.module.scss
+    └── test.spec.js
+```
+
 Guess what? Templates are components, too. Templates are entire pages. And templates be made up exclusively of sections.
 
 They model a similar directory structure, **but there is one major difference**:
 
 - `adapter.js`: For templates, the adapter is the entry point from `gatsby-node.js`. It collects all appropriate data, transforms it, and then passes it on as props to the template component.
 
+### Layout
+
+```
+layout/
+├── index.js
+└── [layout-component-name]/
+    ├── index.js
+    ├── notes.mdx
+    ├── styles.module.scss
+    └── test.spec.js
+```
+
+Layout files are a unique set of components and are pulled out into their own directory. The layout is responsible for bringing a series of components with it, including the header, footer, SEO support, and more. The layout component gets exported from the main `index.js` and imported into the various templates used throughout the site.
+
+The starter kit comes with some basic layout components to make it a little easier to get started.
+
 ### Helpers
+
+```
+helpers/
+├── index.js
+├── [helper-name].js
+└── [helper-name].spec.js
+```
 
 Helpers are a collection of JavaScript functions that provide some shared utility across the application. They differ from components, sections, and templates in that they only provide logical feedback and are not intended to render anything to the DOM.
 
@@ -122,13 +144,23 @@ In general, each function is represented in three files within this directory:
 
 ### Fragments
 
+```
+fragments/
+└── [object-type]-attributes.js
+```
+
 [Fragments](https://graphql.org/learn/queries/#fragments) are a concept in GraphQL. They provide a means of creating reusable field sets.
 
 These files are picked up by Gatsby automatically and do not have to be manually imported throughout the project.
 
-In general, we tend to use the approach of using one file per field set. And we tend to append the name of the file with `-attributes`. For example, say I have a model in the CMS called `Product`. I may make a file at `src/fragments/product-attributes.js` that creates a `ProductAttributes` fragment. Then, whenever we have a `Product` object in a GraphQL query throughout the application, we can simply use `...ProductAttributes`, and it will automatically pick up all the fields from the fragment.
+In general, we use one file per field set. And we append the name of the file with `-attributes`. For example, say I have a model in the CMS called `Product`. I may make a file at `src/fragments/product-attributes.js` that creates a `ProductAttributes` fragment. Then, whenever we have a `Product` object in a GraphQL query throughout the application, we can simply use `...ProductAttributes`, and it will automatically pick up all the fields from the fragment.
 
 ### Images
+
+```
+images/
+└── [image-name].[ext]
+```
 
 While we expect most of a site's images to originate from the CMS solution, there will almost always be a few that we hard-code into the project. Those images go into this directory.
 
@@ -136,13 +168,27 @@ While they _can_ be imported directly, they _should_ be run through GraphQL. The
 
 ### Styles
 
+```
+styles/
+├── global/
+|   └── [name].scss
+├── global-styles.scss
+├── global-utilities.scss
+└── libs/
+    └── sanitize.scss
+```
+
 These are a collection of styles and style utilities that are shared across all components. The primary files are imported by `gatsby-browser.js` so they are automatically included on every page, regardless of the components used. They include, by default:
 
 - `global-styles.js`: Imports partials from `src/styles/globals` to represent all shared styles.
 - `global-utilities.js`: These are variables and mixins that can be used in any other stylesheets.
 - `lib/sanitize.js`: Resets all browser styles.
 
-In addition, there is a file at `lib/docz.scss` which brings in styles specific to the Docz site. These styles do not get included in the Gatsby build.
+## Generating Components
+
+The starter kit comes with a command-line script for generating components, sections, and templates. At this time, the script is super simple and will copy the default set of files into the appropriate directory. The command looks like this:
+
+    $ ./bin/generate.js [component|section|template] [NAME]
 
 ## Documentation
 
