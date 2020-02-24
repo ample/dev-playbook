@@ -219,13 +219,13 @@ Each of these stylesheets has access to all global variables and mixins.
 
 Our approach is fairly loose when writing stylesheets. We aim to follow a few basic rules:
 
-1. Use `.component_name` as the wrapping selector for the component.
-1. In components nest all styles under `.component_name`
-1. In components use underscores to separate words
+- Use `.component_name` as the wrapping selector for the component.
+- In components nest all styles under `.component_name`
+- In components use underscores to separate words
     - Allows for `styles['some_style']` instead of requiring you to convert to camel case `styles['someStyle']` when using dashes.
-1. Keep your SCSS as flat as possible.
-1. Use class names over generic element selectors as much as possible.
-1. Make use of the [classnames utility](https://www.npmjs.com/package/classnames) for concatenating class names together.
+- Keep your SCSS as flat as possible.
+- Use class names over generic element selectors as much as possible.
+- Make use of the [classnames utility](https://www.npmjs.com/package/classnames) for concatenating class names together.
 
 ## Testing
 
