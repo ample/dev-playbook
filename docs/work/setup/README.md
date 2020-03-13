@@ -1,6 +1,4 @@
 # Computer & Environment Setup
-
-# Computer & Environment Setup
 ## Setup and Install
 * Chrome
 * [Slack](https://slack.com/downloads/mac)
