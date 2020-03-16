@@ -1,7 +1,5 @@
 # How We Work
 
-@todo Overview ...
-
 ## How we communicate
 
 We use Slack for general communication.
@@ -55,8 +53,21 @@ It can also be helpful **(even if you're next to each other)** to have a [VS Cod
 
 ## JAM Sessions
 
-Jam Sessions are when a developer(s) and designer(s) are working together. It could be like paired programming where a developer and designer work together to finalize a section of a site. It could also be QA with a developer(s) and designer(s) to quickly make decisions on different parts of a design 
+Jam Sessions are when a developer(s) and designer(s) are working together. It could be like paired programming where a developer and designer work together to finalize a section of a site. It could also be QA with a developer(s) and designer(s) to quickly make decisions on different parts of a design
 
 ### Code Reviews
 
-- @todo How to this can somewhat project specific
+Some projects have more specific requirements but generally, the code review process goes like this.
+
+1. You create a branch off of development (before launch master may be used) and name it something close to the task name.
+1. In that new branch, you can add the required code needed to complete the task.
+1. Once you are ready to open a PR on Github ([docs](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request))
+    :::tip
+    It's helpful to add a description, details on how to set up, links to the preview, other related PRs or any information you feel is important
+    :::
+1. Depending on the workflow for the project receiving a review may work a few different ways.
+    - If there is a column in the task system you can move the task to there and add the PR link as a comment
+    - You can add someone as a reviewer
+    - You can let a specific person/project channel know in Slack
+1. The reviewer should read the code and test for completeness of the task. If there are any issues note them as inline comments if possible or as a review comment.
+1. Once the review is complete if there are any issues the creator will need to work with the reviewer to resolve them before a new review. If not then the reviewer can merge in the PR.
