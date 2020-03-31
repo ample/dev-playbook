@@ -62,7 +62,41 @@ A few examples of systems you may encounter are below. For each one of these, th
 
 ## Time Tracking
 
-...
+All time tracking happens in Paymo. **You are required to have all time in by the end of the week.** It should be the last thing you do every week, no matter what. The exception to this rule is that time must also be in **by the end of the month**. In other words, make it a habit to log your time every day and no one will bug you about it.
+
+:::tip
+Many find it helpful to log time every day. It's much easier to remember what you did on the same day you did it. Logging once a week can be a time-consuming task.
+:::
+
+The entire team (not just the devs) have been asked to track time. We use timesheets to:
+
+- Invoice our time and materials (T&M) clients.
+- Improve the accuracy of fixed-cost project estimates.
+- Understand our capacity for upcoming work.
+
+Our expectations are that:
+
+- You are accurately represent the way in which you spent your time.
+- You've met any deadlines presented to you, or you've communicated early enough to be able to move those deadlines.
+- You've hit the required number of hours for T&M projects. These hours are mentioned in the Monday status meeting.
+
+In other words, **it's more important that you're accurate, produce good work, and meet your deadlines than it is that your timesheets read a certain number**. Some weeks they will say 35, and some weeks they may say 45. The resourcing team works to keep you at or below 40 as an average over time.
+
+And when we say "accurate" we don't mean _down to the minute_. We round entries up to 15-minute increments anyways, so as long as your rounding to the closest 15 minutes, you're being plenty accurate.
+
+### Billing Internal Time
+
+Some teams only track their client work. The dev team tracks 100% of the time we spend, including internal projects. We have a series of internal tasks and projects always running, and you will typically have some internal task to work on each week. We're also fortunate enough to have an abundance of social events which you can also add to your timesheet.
+
+There are two internal projects which you can track time against — Ample Internal and Ample Dev Projects. Ample Internal are company-level tasks, while Ample Dev Projects are specific to the projects our dev team manages, such as this playbook!
+
+In billing 100% of your time, there can be some grey areas in terms of where your time should go. Here are some general guidelines:
+
+- Lunch should only be tracked if you are in a meeting or it is a team building activity. (It's team building if it's on the Ample Social calendar.)
+- If what you're working on for the day is client work, standup can be billed to that client.
+- For most devs, the only time you're going to bill to Ample Internal is status, 1:1 meetings with your manager, and team building activities.
+- Travel at the beginning and end of the day is not billable, but travel _within_ the day is. For example, if you go into the office in the morning, then drive to a client, then drive home, only the middle trip is billable.
+- If you have any questions, ask someone.
 
 ## Status/Standup Meetings
 
