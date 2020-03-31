@@ -79,6 +79,7 @@ Our expectations are that:
 - You are accurately represent the way in which you spent your time.
 - You've met any deadlines presented to you, or you've communicated early enough to be able to move those deadlines.
 - You've hit the required number of hours for T&M projects. These hours are mentioned in the Monday status meeting.
+- Every time entry has a brief description of what you did with that block of time.
 
 In other words, **it's more important that you're accurate, produce good work, and meet your deadlines than it is that your timesheets read a certain number**. Some weeks they will say 35, and some weeks they may say 45. The resourcing team works to keep you at or below 40 as an average over time.
 
