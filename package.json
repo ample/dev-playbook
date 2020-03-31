@@ -3,6 +3,7 @@
     "vuepress": "^1.2.0"
   },
   "scripts": {
+    "develop": "yarn docs:dev",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   }
