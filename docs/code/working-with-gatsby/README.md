@@ -222,7 +222,7 @@ Our approach is fairly loose when writing stylesheets. We aim to follow a few ba
 - Use `.component_name` as the wrapping selector for the component.
 - In components nest all styles under `.component_name`
 - In components use underscores to separate words
-    - Allows for easier usage with props via `styles['some_style']` instead of requiring you to convert to camel case `styles['someStyle']` when using dashes.
+  - Allows for easier usage with props via `styles['some_style']` instead of requiring you to convert to camel case `styles['someStyle']` when using dashes.
 - Keep your SCSS as flat as possible.
 - When using CSS modules use generic element selectors over class names as much as possible.
 - Make use of the [classnames utility](https://www.npmjs.com/package/classnames) for concatenating class names together.
@@ -242,6 +242,10 @@ Read more about our approach to testing [here](/code/testing).
 The starter kit has [stylelint](https://stylelint.io/) and [ESLint](https://eslint.org/) configured and ready to go. These are also configured to run as part of the build command.
 
 It is expected that you resolve all linting warnings and errors before submitting a pull request for review. On a similar note, you should also resolve all console issues, many of which will get picked up by the linter.
+
+## SEO
+
+Google Analytics is already configured out of the box. All you have to do is set a `GOOGLE_ANALYTICS_ID` environment variable, and the appropriate scripts will load. Note that the scripts will not run in development, but only after building and serving (i.e. deploying).
 
 ## Component Library
 
