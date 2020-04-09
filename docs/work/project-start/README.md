@@ -1,18 +1,36 @@
 # Starting a New Project
 
-TODO: Gatsby ...
-TODO: Starter kit
-TODO: Theme library
-TODO: (other conventions in the code guide)
+This guide assumes that you're starting a new project and don't have limitations from either client or scope on following Ample's recommendations. If you do, you will have to veer from this guide. The goal is to stay as close as possible to maintain consistency across our work.
 
-TODO: GitHub
+That ideal process looks like this:
 
-TODO: Netlify ...
-TODO: Hosting
-TODO: CI/CD
-TODO: Forms
-TODO: Functions
+1. **Clone the [Gatsby starter](https://github.com/ample/gatsby-starter-ample)**.
 
-TODO: Content Management System
+   ```
+   $ gatsby new [PROJECT_NAME] ample/gatsby-starter-ample
+   ```
 
-TODO: Algolia
+   Our convention is for the names we use to mimic the domains to which the project(s) will be deployed. For example, if the project will be deployed to https://www.helloample.com, the repo should be `helloample-com`. (Note: We tend to omit the `www` unless necessary.)
+
+   In cases where we don't know the domain or it isn't relevant, name it semantically and concisely. We can always come back and change it later.
+
+2. **Create a repository** in [Ample's Github organization](https://github.com/ample).
+
+3. **Adjust the Git remote URL** to reflect the new repo, then push.
+
+   ```
+   $ git remote set-url origin [NEW_REPO_URL]
+   $ git push origin master
+   ```
+
+4. **Create a new Netlify site**. If the client already has a team account, or if you can get the client's credit card to set one up on their behalf, or if you can have the client setup their account, _great!_ But usually that doesn't happen out of the gate. In most cases, you can start by creating the project under [the Ample team](https://app.netlify.com/teams/ample/sites).
+
+   If using our Gatsby starter, the build command should be `yarn netlify:build:with_storybook`, and the publish directory should be `public`.
+
+5. **Rename the site**. Netlify renames. ike the repo, name these projects appropriately, reflecting the URL to which they will eventually be deployed.
+
+6. **Add a password to the site.** Even though this will _eventually_ be our production site, we're treating it like it's a staging site until it's launched.
+
+Now you're ready to go! Eventually you'll want to register third-party services, but that's the base set of tasks that will get you up and running.
+
+For more information on the code, visit [_Working with Gatsby_](/code/working-with-gatsby).
