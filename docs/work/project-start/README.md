@@ -29,6 +29,8 @@ That ideal process looks like this:
    $ git push origin master
    ```
 
+1. Add the [Pull Request Template](/work/pull-request-template/)
+
 1. **Create a new Netlify site**. If the client already has a team account, or if you can get the client's credit card to set one up on their behalf, or if you can have the client setup their account, _great!_ But usually that doesn't happen out of the gate. In most cases, you can start by creating the project under [the Ample team](https://app.netlify.com/teams/ample/sites).
 
    If using our Gatsby starter, the build command should be `yarn netlify:build:with_storybook`, and the publish directory should be `public`.
