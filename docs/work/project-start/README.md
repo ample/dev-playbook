@@ -10,7 +10,7 @@ That ideal process looks like this:
    $ yarn global add gatsby-cli
    ```
 
-2. **Clone the [Gatsby starter](https://github.com/ample/gatsby-starter-ample)**.
+1. **Clone the [Gatsby starter](https://github.com/ample/gatsby-starter-ample)**.
 
    ```
    $ gatsby new [PROJECT_NAME] ample/gatsby-starter-ample
@@ -20,22 +20,22 @@ That ideal process looks like this:
 
    In cases where we don't know the domain or it isn't relevant, name it semantically and concisely. We can always come back and change it later.
 
-3. **Create a repository** in [Ample's Github organization](https://github.com/organizations/ample/repositories/new).
+1. **Create a repository** in [Ample's Github organization](https://github.com/organizations/ample/repositories/new).
 
-4. **Adjust the Git remote URL** to reflect the new repo, then push.
+1. **Adjust the Git remote URL** to reflect the new repo, then push.
 
    ```
    $ git remote set-url origin [NEW_REPO_URL]
    $ git push origin master
    ```
 
-5. **Create a new Netlify site**. If the client already has a team account, or if you can get the client's credit card to set one up on their behalf, or if you can have the client setup their account, _great!_ But usually that doesn't happen out of the gate. In most cases, you can start by creating the project under [the Ample team](https://app.netlify.com/teams/ample/sites).
+1. **Create a new Netlify site**. If the client already has a team account, or if you can get the client's credit card to set one up on their behalf, or if you can have the client setup their account, _great!_ But usually that doesn't happen out of the gate. In most cases, you can start by creating the project under [the Ample team](https://app.netlify.com/teams/ample/sites).
 
    If using our Gatsby starter, the build command should be `yarn netlify:build:with_storybook`, and the publish directory should be `public`.
 
-6. **Rename the site**. Netlify renames. ike the repo, name these projects appropriately, reflecting the URL to which they will eventually be deployed.
+1. **Rename the site**. Netlify renames. ike the repo, name these projects appropriately, reflecting the URL to which they will eventually be deployed.
 
-7. **Add a [password](https://docs.netlify.com/visitor-access/password-protection/#site-wide-protection) to the site.** Even though this will _eventually_ be our production site, we're treating it like it's a staging site until it's launched.
+1. **Add a [password](https://docs.netlify.com/visitor-access/password-protection/#site-wide-protection) to the site.** Even though this will _eventually_ be our production site, we're treating it like it's a staging site until it's launched.
 
 Now you're ready to go! Eventually you'll want to register third-party services, but that's the base set of tasks that will get you up and running.
 
