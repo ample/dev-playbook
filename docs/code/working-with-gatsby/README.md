@@ -139,8 +139,8 @@ Helpers are a collection of JavaScript functions that provide some shared utilit
 In general, each function is represented in three files within this directory:
 
 1. `[component-name].js`: The file containing the function's code. It should be a hyphenized version of the function name. (e.g. If the function is called `sayHello`, the file should be named `say-hello.js`.) This file should export the function as its default export.
-2. `[component-name].spec.js`: The tests for the function. Every function should come with tests.
-3. `index.js`: This is a manifest file. It should import every function and export them as named exports.
+1. `[component-name].spec.js`: The tests for the function. Every function should come with tests.
+1. `index.js`: This is a manifest file. It should import every function and export them as named exports.
 
 ### Fragments
 
