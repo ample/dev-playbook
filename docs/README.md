@@ -26,10 +26,9 @@ Clone repo
 # install
 yarn 
 yarn develop
-# OR npm install -g vuepress
 
 # create a markdown file
-echo '# Hello VuePress' > README.md
+echo '# Hello VuePress' > docs/some-topic/README.md
 
 # start writing
 vuepress dev
