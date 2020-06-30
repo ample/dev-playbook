@@ -49,8 +49,8 @@ For more info on [SSH key passphrase](https://help.github.com/en/github/authenti
 * [Rainbow Brackets](https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets) provides rainbow colors for the round brackets, square brackets, and the squiggly brackets. 
 
 ### Our Developers recommend... 
-* [Magnet app](https://apps.apple.com/us/app/magnet/id441258766?mt=12) - Every time you move a content from one app to the other, compare data side by side or multitask in any other way, you need all the windows arranged accordingly. Magnet makes this process clean and simple. In one drag to the edge, you size a window into half of your screen.
+* [Magnet app](https://apps.apple.com/us/app/magnet/id441258766?mt=12) - Every time you move content from one app to the other, compare data side by side or multitask in any other way, you need all the windows arranged accordingly. Magnet makes this process clean and simple. In one drag to the edge, you size a window into half of your screen.
 * [Bear](https://apps.apple.com/us/app/bear/id1091189122?mt=12) - A beautiful, flexible writing app for crafting notes and prose. 
 * [Copy Clip 2](https://apps.apple.com/us/app/copyclip-2-clipboard-manager/id1020812363?mt=12) - A lightning fast clipboard manager for your Mac.
-* [Transmit](https://apps.apple.com/us/app/transmit-5/id1436522307?mt=12) - A file transfer client program for macOS
+* [Transmit](https://apps.apple.com/us/app/transmit-5/id1436522307?mt=12) - A file transfer client program for macOS.
 * [Muzzle](https://muzzleapp.com/) - A free app that silences incoming notifications during presentations and screen-sharing.
