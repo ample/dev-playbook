@@ -5,7 +5,7 @@ This guide shows how to set up Ample devices for running, debugging, developing,
 Here is a list of programs you are going to need to install:
 
 - We recommend utilizing [Google Chrome](https://www.google.com/chrome/).
-- We communicate and collaborate internally and with clients on [Slack](https://slack.com/downloads/mac)
+- We communicate and collaborate on [Slack](https://slack.com/downloads/mac)
 - Most of our meetings that aren't on Slack are on [Zoom.us](Zoom.us)
 - [1Password](https://1password.com/)  - Taylor will invite you to our vault
 - We recommend using [VS Code](https://code.visualstudio.com/download) (this is what most of our developers use)
