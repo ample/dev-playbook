@@ -1,10 +1,13 @@
 {
   "devDependencies": {
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.5.0"
   },
   "scripts": {
     "develop": "yarn docs:dev",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vuepress-plugin-code-copy": "^1.0.6"
   }
 }

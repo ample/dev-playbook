@@ -19,15 +19,16 @@ TODO: Add content
 
 Hello there, this is some intro copy ...
 
-### As Easy as 1, 2, 3
+### Getting Started
 
 ```bash
+Clone repo
 # install
-yarn global add vuepress
-# OR npm install -g vuepress
+yarn 
+yarn develop
 
 # create a markdown file
-echo '# Hello VuePress' > README.md
+echo '# Hello VuePress' > docs/some-topic/README.md
 
 # start writing
 vuepress dev

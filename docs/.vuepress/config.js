@@ -3,6 +3,16 @@ module.exports = {
   description: "We're Ample developers. This is how we do work.",
   port: 8000,
   head: [["link", { rel: "icon", href: "/favicon.png" }]],
+  plugins: [
+    [
+      "vuepress-plugin-code-copy",
+      {
+        selector: 'div[class*="language-"] pre',
+        backgroundTransition: true,
+        staticIcon: false
+      }
+    ]
+  ],
   themeConfig: {
     docsRepo: "ample/dev-playbook",
     docsDir: "docs",
@@ -57,5 +67,14 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+  plugins: [
+    [
+      "vuepress-plugin-container",
+      {
+        type: "info",
+        defaultTitle: ""
+      }
+    ]
+  ]
 }
