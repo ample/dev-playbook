@@ -4,6 +4,7 @@
   },
   "scripts": {
     "develop": "yarn docs:dev",
+    "build": "yarn docs:build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },

@@ -44,7 +44,6 @@ module.exports = {
           collapsable: false,
           children: [
             ["/code/", "Overview"],
-            "/code/dev-concepts/",
             "/code/syntax-styleguides/",
             "/code/working-with-gatsby/",
             "/code/testing/",
