@@ -67,5 +67,14 @@ module.exports = {
         }
       ]
     }
-  }
+  },
+  plugins: [
+    [
+      "vuepress-plugin-container",
+      {
+        type: "info",
+        defaultTitle: ""
+      }
+    ]
+  ]
 }
