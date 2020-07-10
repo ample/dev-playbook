@@ -1,6 +1,6 @@
 # Syntax Styleguides
 
-Our goal with in following syntactical conventions is to be consistent _enough_ across projects that it is easy to jump in and out of any given project without getting tripped up by someone's goofy way of writing.
+Our goal with following syntactical conventions is to be consistent _enough_ across projects that it is easy to jump in and out of any given project without getting tripped up by someone's goofy way of writing.
 
 The following sections outline a set of guidelines Ample devs should be familiar with.
 
