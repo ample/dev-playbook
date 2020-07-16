@@ -1,5 +1,11 @@
 # Working with Gatsby
 
+:::warning
+This page is currently out of date and will soon be removed. Our approach to projects has been spread out among the playbook, along with other locations.
+
+Please visit [the Starter Kits guide](/code/starter-kits) as a starting point for working with Gatsby.
+:::
+
 Our framework of choice is [Gatsby](https://www.gatsbyjs.org/). Gatsby is an open source framework based on React that helps developers build blazing fast websites and apps.
 
 If you're new to Gatsby, start by getting familiar with the framework. They have some great tutorials [on their site](https://www.gatsbyjs.org/tutorial/). But it's a popular framework — there's an abundance of intro tutorials out there.
@@ -222,7 +228,7 @@ Our approach is fairly loose when writing stylesheets. We aim to follow a few ba
 - Use `.component_name` as the wrapping selector for the component.
 - In components nest all styles under `.component_name`
 - In components use underscores to separate words
-    - Allows for easier usage with props via `styles['some_style']` instead of requiring you to convert to camel case `styles['someStyle']` when using dashes.
+  - Allows for easier usage with props via `styles['some_style']` instead of requiring you to convert to camel case `styles['someStyle']` when using dashes.
 - Keep your SCSS as flat as possible.
 - When using CSS modules use generic element selectors over class names as much as possible.
 - Make use of the [classnames utility](https://www.npmjs.com/package/classnames) for concatenating class names together.
