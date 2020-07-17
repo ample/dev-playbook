@@ -18,7 +18,9 @@ When starting a new project, we use a home-grown starter kit. You can find that 
 
 If Gatsby is installed globally, you can start a new project from the command-line:
 
-    $ gatsby new [project-name] ample/gatsby-starter-ample
+```bash
+gatsby new [project-name] ample/gatsby-starter-ample
+```
 
 The following sections walk through what the starter brings on top of Gatsby.
 
@@ -28,7 +30,7 @@ The following sections walk through what the starter brings on top of Gatsby.
 
 Our projects start with a handful of source directories that each play a specific role in the project. Here's the starting structure, in alphabetical order:
 
-```
+```bash
 src/
 ├── components/
 ├── fragments/
@@ -44,7 +46,7 @@ Let's take a tour through each of them (a little out of order) ...
 
 ### Components
 
-```
+```bash
 components/
 └── [component-name]/
     ├── index.js
@@ -70,7 +72,7 @@ When that happens, you can nest the component _within_ the original component's 
 
 For example, consider a header component. Say it has a logo, but the logo is also used in the footer. But say it also has a nav menu, but that isn't used elsewhere in the project. In that case, the directory structure might look something like this:
 
-```
+```bash
 components/
 ├── header/
 |   ├── mobile-menu/
@@ -82,7 +84,7 @@ components/
 
 ### Sections
 
-```
+```bash
 sections/
 └── [section-name]/
     ├── index.js
@@ -117,7 +119,7 @@ They model a similar directory structure, **but there is one major difference**:
 
 ### Layout
 
-```
+```bash
 layout/
 ├── index.js
 └── [layout-component-name]/
@@ -133,7 +135,7 @@ The starter kit comes with some basic layout components to make it a little easi
 
 ### Helpers
 
-```
+```bash
 helpers/
 ├── index.js
 ├── [helper-name].js
@@ -150,7 +152,7 @@ In general, each function is represented in three files within this directory:
 
 ### Fragments
 
-```
+```bash
 fragments/
 └── [object-type]-attributes.js
 ```
@@ -163,7 +165,7 @@ In general, we use one file per field set. And we append the name of the file wi
 
 ### Images
 
-```
+```bash
 images/
 └── [image-name].[ext]
 ```
@@ -174,7 +176,7 @@ While they _can_ be imported directly, they _should_ be run through GraphQL. The
 
 ### Styles
 
-```
+```bash
 styles/
 ├── global/
 |   └── [name].scss
@@ -237,7 +239,9 @@ Our approach is fairly loose when writing stylesheets. We aim to follow a few ba
 
 We use [Jest](https://jestjs.io/en/) as our testing framework for Gatsby projects. The setup ships with the starter template. Testing can be run with this command:
 
-    $ yarn test
+```shell
+$ yarn test
+```
 
 By default, that command is included in the build script for Netlify (see the `netlify.toml` file).
 
