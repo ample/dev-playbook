@@ -24,7 +24,7 @@ Hello there, this is some intro copy ...
 ```bash
 Clone repo
 # install
-yarn 
+yarn
 yarn develop
 
 # create a markdown file

@@ -24,7 +24,7 @@ The format we use is this:
 
 1. Raise your hand (:raised_hand: or :wave:).
 1. Provide context to your problem.
-2. Explain where you are stuck.
+1. Explain where you are stuck.
 1. Add any relevant details, like things you've already tried already.
 
 The first dev who thinks they can help reacts to the message with :eyes: to indicate they are looking into it (so we don't duplicate efforts). If that dev gets stuck, they should note it in a thread to the original message, adding any necessary details.
