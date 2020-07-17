@@ -21,22 +21,20 @@ Hello there, this is some intro copy ...
 
 ### Getting Started
 
-```bash
-Clone repo
+This project uses [Yarn](https://yarnpkg.com)
+
+``` sh
+# Clone repo
+
 # install
 yarn
-yarn develop
 
 # create a markdown file
 echo '# Hello VuePress' > docs/some-topic/README.md
 
 # start writing
-vuepress dev
+yarn develop
 
 # build to static files
-vuepress build
+yarn build
 ```
-
-::: warning COMPATIBILITY NOTE
-VuePress requires Node.js >= 8.6.
-:::
