@@ -45,7 +45,7 @@ module.exports = {
           children: [
             ["/code/", "Overview"],
             "/code/syntax-styleguides/",
-            "/code/working-with-gatsby/",
+            "/code/starter-kits/",
             "/code/testing/",
             "/code/data-architecture/",
             "/code/component-architecture/"
