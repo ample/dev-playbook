@@ -20,9 +20,9 @@ yarn develop
 yarn build
 ```
 
-::: warning COMPATIBILITY NOTE
+## COMPATIBILITY NOTE
+
 VuePress requires Node.js >= 8.6.
-:::
 
 ## Workflow
 
