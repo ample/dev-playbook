@@ -32,12 +32,12 @@ All tasks (features, defects, and spikes) for Crossroads developers are managed 
 ### Code Review Workflow
 
 1. When you are reviewing another developers code move the story into **Code Review**
-1. Verify that all related GitHub checks have completed
-1. Verify that all required changes have been made from the story.
-1. Verify all code adheres to the principals in the [Code section](/code/).
-1. If there are any changes requested. Move the story back into **To Do** and block it with **PR Comments**
+2. Verify that all related GitHub checks have completed
+3. Verify that all required changes have been made from the story.
+4. Verify all code adheres to the principals in the [Code section](/code/).
+5. If there are any changes requested. Move the story back into **To Do** and block it with **PR Comments**
 1. Complete the code review(s) by approving and merging the code
-1. Once all PRs have been merged "Green Check" the story by using the checkmark in the bottom of the card.
+2. Once all PRs have been merged "Green Check" the story by using the checkmark in the bottom of the card.
 
 ## Communication
 
