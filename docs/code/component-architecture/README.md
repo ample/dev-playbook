@@ -81,9 +81,52 @@ The main test spec for the component. See [the Testing article](/code/testing/) 
 
 Typically we will test the rendering of the component, along with any logical pieces that it brings.
 
-TODO:
+## Sharing Components & Subcomponents
 
-- Subcomponents & Sharing
-- Naming Compontents & Props
-- Helper Methods
-- Documentation
+It's really easy for a project's files to get out of hand if not organized well. Simply dumping components into some `src/components` directory is not scalable. To keep our projects organized, we follow these few principles:
+
+- Components available at the top-most level in the primary components directory are shared (or available to share) among any other component (e.g. `src/components/button/`).
+- Groups of components that serve a purpose other than being a shared component can live in their own top-level source directory. For example, instead of treating templates (which may be components) as a component, they could live in a `src/templates/` directory.
+- Components that exist only as a subcomponent of one other component should live within that directory (e.g. `src/layout/header/`).
+
+For scenarios that fall outside these, use your best judgment. If you're looking for a good example, refer to the [Gatsby Starter](https://github.com/ample/gatsby-starter-ample).
+
+## Naming Conventions
+
+Naming is hard. How about some rules to help?
+
+### Files
+
+Files and directories should be written in kebab-case, which means all lower case with hyphens separating words.
+
+### Components
+
+As much as possible, components should be named for what they are or what they do. Keep it semantic. They should be named in PascalCase and match, as closely as possible, to the filename. For example, if the directory for the component is `solution-finder`, the component object should be `SolutionFinder`.
+
+### Props
+
+We're a little more particular about props:
+
+- Props use snake_case. While this may seem confusing, it is to more easily maintain parity with the naming conventions of the CMS products we tend to use.
+- The prop `theme` is used to designate variations on a component. This may help a component wrap itself in another component, passing the props down, or it may simply get passed to the stylesheet.
+- Options within a prop should also use snake_case. This is due to limitations with Sass and CSS Modules. For example, if `theme` is a prop and one option is a red outline, it should be `outline_red` (or `red_outline`).
+- When multiple words may work, stick with consistency. For example, if there is one main body of text for a component, call it `body` (as we've done in the starters), even when it may be _acting_ as a description.
+
+As always, use your best judgment. If you aren't sure, look at some examples. The [Gatsby Starter](https://github.com/ample/gatsby-starter-ample) is a good resource.
+
+## Helper Methods
+
+We're still forming opinions on helper methods. The approach has varied depending on the complexity of the helper methods. Typically we put helpers in their own file. When they serve only a single component, we tend to keep that file within the component's directory, using the component's test file to also run tests on the helper.
+
+The idea behind helpers is that they are providing some sort of logical support. Therefore, **every helper should be tested**.
+
+If you run into a situation where you think you need a shared helper, especially in a Gatsby project, that means one of two things:
+
+1. There's a more Gatsby-ish way of doing what you're doing.
+2. You should be creating a plugin.
+
+## Documentation
+
+In an ideal world, our code is self-documenting. But that's not how it usually works. And it's nice to have a quick reference to know the role of each prop within any given component.
+
+Therefore, every prop for every component should be validated [using prop-types](https://reactjs.org/docs/typechecking-with-proptypes.html). Each prop within the `propTypes` object should be preceded by a comment that provides a quick description on the prop's role and use.
