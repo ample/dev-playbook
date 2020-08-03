@@ -60,8 +60,7 @@ module.exports = {
             ["/clients/", "Overview"],
             "/clients/8451/",
             "/clients/crossroads/",
-            "/clients/patient-point/",
-            "/clients/kroger/"
+            "/clients/patient-point/"
           ]
         }
       ]
