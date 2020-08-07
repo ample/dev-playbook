@@ -39,9 +39,19 @@ Of all the files shown above, the adapter is likely the one you'll see the least
 
 You can learn more about the theory behind this approach in [this article](https://cobwwweb.com/simplify-components-by-separating-logic-from-presentation-using-adapters.html). Sean also wrote [an article on a Gatsby-specific implementation](https://cobwwweb.com/introducing-component-adapters-into-gatsby.html) that may be worthwhile if you want to learn more about the approach.
 
+:::info
+[Here is an example](https://github.com/ample/covingtonclassicalacademy-org/blob/master/src/components/calendar) of a component with an adapter out in the wild.
+
+It's a calendar built on top of [React Big Calendar](http://jquense.github.io/react-big-calendar/examples/index.html), which accepts an array of events and passes them on to the RBC component, after adjusting some configuration.
+
+The component itself knows nothing about the project's data source. But the adapter does. It retrieves the data from the data source and then wraps the calendar component (which wraps RC). So, when it's [used in production](https://github.com/ample/covingtonclassicalacademy-org/blob/master/src/sections/container/index.js#L10) we use the adapter. But the static calendar can also work on its own.
+:::
+
 ### `component.js`
 
 This is the main component. If you're used to only ever seeing a single file represent a component, this is that file.
+
+For a detailed reference on best practices in keeping this file organized and clean, see [the syntax styleguide](/code/syntax-styleguides/#react-components) for React components.
 
 ### `fixtures.js`
 
@@ -68,6 +78,24 @@ What this does is provide a front door for the component, while enabling other i
 1. When a component is consumed by another, it doesn't matter what the structure is — the component directory's default export is automatically picked up, as long as the consuming component imports the component from the index file.
 2. It puts all relevant exports in one place. Consider that a test spec could load both the component and the fixture from a single file.
 3. It provides a means to contextually switch the default export depending on the environment. This comes in handy when working with adapters.
+
+:::tip
+The line `export { component, fixtures }` provides a means for importing all relevant files from the `index.js` file rather than need multiple import lines.
+
+In other words, you can do this:
+
+```jsx
+import { component as Button, fixtures } from "@src/components/button"
+```
+
+Instead of this:
+
+```jsx
+import Button from "@src/components/button/component"
+import fixtures from "@src/components/button/fixtures"
+```
+
+:::
 
 ### `styles.module.scss`
 
@@ -107,7 +135,7 @@ As much as possible, components should be named for what they are or what they d
 
 We're a little more particular about props:
 
-- Props use snake_case. While this may seem confusing, it is to more easily maintain parity with the naming conventions of the CMS products we tend to use.
+- Props keys use snake_case (e.g. `<MyComponent some_prop="value" />`). While this may seem awkward, it provides parity with the naming conventions of the CMS products we tend to use.
 - The prop `theme` is used to designate variations on a component. This may help a component wrap itself in another component, passing the props down, or it may simply get passed to the stylesheet.
 - Options within a prop should also use snake_case. This is due to limitations with Sass and CSS Modules. For example, if `theme` is a prop and one option is a red outline, it should be `outline_red` (or `red_outline`).
 - When multiple words may work, stick with consistency. For example, if there is one main body of text for a component, call it `body` (as we've done in the starters), even when it may be _acting_ as a description.

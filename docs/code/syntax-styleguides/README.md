@@ -69,6 +69,7 @@ export default ComponentName
 There's a lot going on here, even in this basic component. So let's walk through the important pieces:
 
 - _Import statements_ are written in groups to make them easier to get through. Third-party libs (from `node_modules`, typically) are at the top. Following that, use your best judgment. Usually the groups are something like: styles, subcomponents, project-specific components, layouts, etc. Those don't have to be in a specific order, but it's easier to read when they are grouped together.
+- Functional components are preferred over class components. With the advancement of [React hooks](https://reactjs.org/docs/hooks-intro.html), it's unlikely that we'll need to write functional components.
 - [_Destructure_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the properties accepted by a component when reasonable.
 - Use an explicit `return` statement for components. That way it's consistent across the board.
 - All properties should be specified in the `propTypes` object, and each should have a description with the represented comment syntax. The description acts as our main point of documentation for the component, so be specific if necessary.
