@@ -85,9 +85,17 @@ Last, look for opportunities to improve the code. Consider items like hard-codin
 
 This is also the lens by which you can ensure that unit tests were included and passed.
 
-## Testing Features
+## Testing Features (Acceptance Testing)
 
-Once the code looks good, it's time to
+Once the code looks good, it's time to check it out in a browser and make sure it looks good. This is where you run through each of those AC scenarios spelled out in the story and make sure they pass your inspection.
+
+As of now, acceptance testing is all done manually. We'd love your input on methods we could use for automating this process.
+
+But, now that it's manual, we recommend:
+
+- Testing desktop and mobile to make sure design changes flow responsively.
+- Pick a couple highly visible and important features, and test that they're working every time. Think: mobile menu, call-to-action buttons, etc.
+- Look at a couple different browsers, including IE 11 or Edge, depending on browser support for that project.
 
 ## Merging Code
 
