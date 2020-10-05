@@ -34,6 +34,7 @@ module.exports = {
             "/work/setup/",
             "/work/project-start/",
             "/work/project-work/",
+            "/work/quality-assurance/",
             "/work/project-end/"
           ]
         }
