@@ -167,6 +167,4 @@ Before submitting for review (following the process in the Paymo section above),
 
 ### Reviewing Code
 
-When acting as the reviewer, work to find a balance between _delivering with excellence_ and being _nitpicky about details_.
-
-For example, inconsistent indentation or spacing aren't really worth the effort to comment on and fix. But if the developer was lazy enough to not be consistent, then they're probably missing something else integral to the task.
+When acting as the reviewer, work to find a balance between _delivering with excellence_ and being _nitpicky about details_. For more information on reviewing code, see [Quality Assurance](/work/quality-assurance).
