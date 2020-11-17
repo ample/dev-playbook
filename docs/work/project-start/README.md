@@ -29,13 +29,11 @@ That ideal process looks like this:
    $ git push origin master
    ```
 
-1. Add the [Pull Request Template](/work/pull-request-template/)
-
 1. **Create a new Netlify site**. If the client already has a team account, or if you can get the client's credit card to set one up on their behalf, or if you can have the client setup their account, _great!_ But usually that doesn't happen out of the gate. In most cases, you can start by creating the project under [the Ample team](https://app.netlify.com/teams/ample/sites).
 
-   If using our Gatsby starter, the build command should be `yarn netlify:build:with_storybook`, and the publish directory should be `public`.
+   If using our Gatsby starter, the build command should be `yarn netlify:build`, and the publish directory should be `public`. But these will be set automatically by `netlify.toml`.
 
-1. **Rename the site**. Netlify renames. ike the repo, name these projects appropriately, reflecting the URL to which they will eventually be deployed.
+1. **Rename the site**. Netlify names the project automatically. Rename the site to match the repo name.
 
 1. **Add a [password](https://docs.netlify.com/visitor-access/password-protection/#site-wide-protection) to the site.** Even though this will _eventually_ be our production site, we're treating it like it's a staging site until it's launched.
 
