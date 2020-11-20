@@ -20,6 +20,8 @@ That ideal process looks like this:
 
    In cases where we don't know the domain or it isn't relevant, name it semantically and concisely. We can always come back and change it later.
 
+   For staging sites, we treat the variance as though it were a subdomain. For example, if the production site is `helloample-com`, then the staging site would be `staging-helloample-com`.
+
 1. **Create a repository** in [Ample's Github organization](https://github.com/organizations/ample/repositories/new).
 
 1. **Adjust the Git remote URL** to reflect the new repo, then push.
