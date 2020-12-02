@@ -21,8 +21,7 @@ module.exports = {
     nav: [
       { text: "Home", link: "/" },
       { text: "Work", link: "/work/" },
-      { text: "Code", link: "/code/" },
-      { text: "Clients", link: "/clients/" }
+      { text: "Code", link: "/code/" }
     ],
     sidebar: {
       "/work/": [
@@ -50,18 +49,6 @@ module.exports = {
             "/code/testing/",
             "/code/data-architecture/",
             "/code/component-architecture/"
-          ]
-        }
-      ],
-      "/clients/": [
-        {
-          title: "Our Clients",
-          collapsable: false,
-          children: [
-            ["/clients/", "Overview"],
-            "/clients/8451/",
-            "/clients/crossroads/",
-            "/clients/patient-point/"
           ]
         }
       ]
