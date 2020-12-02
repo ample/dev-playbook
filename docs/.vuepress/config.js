@@ -21,8 +21,7 @@ module.exports = {
     nav: [
       { text: "Home", link: "/" },
       { text: "Work", link: "/work/" },
-      { text: "Code", link: "/code/" },
-      { text: "Clients", link: "/clients/" }
+      { text: "Code", link: "/code/" }
     ],
     sidebar: {
       "/work/": [
