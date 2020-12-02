@@ -52,18 +52,6 @@ module.exports = {
             "/code/component-architecture/"
           ]
         }
-      ],
-      "/clients/": [
-        {
-          title: "Our Clients",
-          collapsable: false,
-          children: [
-            ["/clients/", "Overview"],
-            "/clients/8451/",
-            "/clients/crossroads/",
-            "/clients/patient-point/"
-          ]
-        }
       ]
     }
   },
