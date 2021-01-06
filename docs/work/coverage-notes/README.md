@@ -1,4 +1,4 @@
-# Introduction
+# Coverage Notes
 
 When done correctly, coverage notes allow you to take the time you need off without resulting in any headaches for you or the team. In your coverage notes, you should provide 3 things: What you are currently working on, what the status of your work is, and any other important notes that might be helpful to someone picking up the task. In conjunction with coverage notes, you should also talk to your PM(s) about anything else you might have missed. Your coverage notes should then be posted in the #general channel on Slack
 

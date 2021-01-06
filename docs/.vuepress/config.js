@@ -30,6 +30,7 @@ module.exports = {
           collapsable: false,
           children: [
             ["/work/", "Overview"],
+            "/work/coverage-notes/",
             "/work/setup/",
             "/work/project-start/",
             "/work/project-work/",
