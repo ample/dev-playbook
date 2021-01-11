@@ -1,12 +1,12 @@
 # Component Architecture
 
-Component-driven development is a game-changing way to build websites, _if_ you do it right. Do it wrong and a project can quickly become a mess.
+[Component-driven development](https://www.seancdavis.com/blog/wtf-is-component-driven-development/) is a game-changing way to build websites, _if_ you do it right. Do it wrong and a project can quickly become a mess.
 
-But "right" is subjective, and _components_ is a broad term that can be interpreted in a number of different ways. Therefore, _the right way_ is no one, single, prescriptive way. It's one thing and one thing only — **_consistency_**.
+But "right" is subjective, and _components_ can be interpreted in a number of different ways. Therefore, _the right way_ is no one, single, prescriptive way. The right way is one thing and one thing only: **_consistency_**.
 
-By establishing a convention in which we work, we make it easier to jump from project to project and understand what's going on. Of course, we want the convention to be easy to understand and follow, while still being flexible enough to accommodate the unique scenarios we run into regularly.
+By establishing a convention in which we work, we make it easier to jump gracefully from project to project. We aim to make the convention easy to understand and follow, while still being flexible enough to accommodate the unique scenarios our clients regularly present to us.
 
-What follows here is ... a lot. We've put a lot of thought (mostly through trial and error) into this approach. We've seen it work, but it's still evolving over time. Like everything else at Ample, if you have a suggestion for a better approach, we're all ears.
+What follows here is ... _a lot_. We've put a lot of thought into this approach (mostly through trial and error). And we've seen it work, though it continues to evolve over time. Like everything else at Ample, if you have a suggestion for a better approach, speak up. We're all ears.
 
 :::info
 In the docs to follow, you'll notice that we follow two primary paradigms:
@@ -17,7 +17,7 @@ In the docs to follow, you'll notice that we follow two primary paradigms:
 
 ## File Structure
 
-**Every component gets its own directory**. Components should not hang out on their own as individual files. This follows the single-responsibility principle, and is built upon [this practice](https://cobwwweb.com/organize-components-by-keeping-related-files-close) Sean laid out in keeping related files close to make it easier to move around a project's codebase.
+**Every component gets its own directory**. Components should not hang out on their own as individual files. This follows the single-responsibility principle, and is built upon [this practice](https://www.seancdavis.com/blog/organize-components-by-keeping-related-files-close/) Sean laid out in keeping related files close to make it easier to move around a project's codebase.
 
 Within that directory, there may be some variation, but the structure should largely look the same across all components. A typical component (if there is such a thing) looks like this:
 
@@ -28,7 +28,8 @@ Within that directory, there may be some variation, but the structure should lar
 ├── fixtures.js
 ├── index.js
 ├── styles.module.scss
-└── test.spec.js
+├── test.spec.js
+└── transformer.js
 ```
 
 See below for explanations on each piece of the puzzle:
@@ -37,7 +38,7 @@ See below for explanations on each piece of the puzzle:
 
 Of all the files shown above, the adapter is likely the one you'll see the least frequently. Its role is to feed in dynamic data into a component. It connects directly to the data source, pulls in the data, transforms it, and then sends it on to the component.
 
-You can learn more about the theory behind this approach in [this article](https://cobwwweb.com/simplify-components-by-separating-logic-from-presentation-using-adapters.html). Sean also wrote [an article on a Gatsby-specific implementation](https://cobwwweb.com/introducing-component-adapters-into-gatsby.html) that may be worthwhile if you want to learn more about the approach.
+You can learn more about the theory behind this approach in [this article](https://www.seancdavis.com/blog/simplify-components-by-separating-logic-from-presentation-using-adapters/). Sean also wrote [an article on a Gatsby-specific implementation](https://www.seancdavis.com/blog/introducing-component-adapters-into-gatsby/) that may be worthwhile if you want to learn more about the approach.
 
 :::info
 [Here is an example](https://github.com/ample/covingtonclassicalacademy-org/blob/master/src/components/calendar) of a component with an adapter out in the wild.
@@ -76,8 +77,8 @@ export { component, fixtures }
 What this does is provide a front door for the component, while enabling other important pieces to be included. This provides us with three primary benefits:
 
 1. When a component is consumed by another, it doesn't matter what the structure is — the component directory's default export is automatically picked up, as long as the consuming component imports the component from the index file.
-2. It puts all relevant exports in one place. Consider that a test spec could load both the component and the fixture from a single file.
-3. It provides a means to contextually switch the default export depending on the environment. This comes in handy when working with adapters.
+1. It puts all relevant exports in one place. Consider that a test spec could load both the component and the fixture from a single file.
+1. It provides a means to contextually switch the default export depending on the environment. This comes in handy when working with adapters.
 
 :::tip
 The line `export { component, fixtures }` provides a means for importing all relevant files from the `index.js` file rather than need multiple import lines.
@@ -108,6 +109,55 @@ These style files are simply [Sass](https://sass-lang.com/) files that are consu
 The main test spec for the component. See [the Testing article](/code/testing/) for more information on our approach to testing.
 
 Typically we will test the rendering of the component, along with any logical pieces that it brings.
+
+### `transformer.js`
+
+Transformers help solve a gap in parity between the data source and the component. The simplest example is [our default button component](https://github.com/ample/gatsby-starter-ample/tree/main/src/components/button). The component is built on top of gatsby-link and mimics its props. Therefore, the button component expects `to` and `children` attributes when using it, like so:
+
+```jsx
+<Button to="/">Go Home</Button>
+```
+
+But `to` and `children` don't really make sense to most content editors. Instead, in our CMS schemas, we often use field names like `url` and `label` instead. That's where the transformer comes into play. It can take the incoming props, _transform_ them, and then return props that the component expects.
+
+The button transformer might look something like this:
+
+```js
+export default input => {
+  return {
+    ...input,
+    children: input.children || input.label,
+    to: input.to || input.url
+  }
+}
+```
+
+Notice that it passes `children` and `to` through if they exist, otherwise it falls back to `label` and `url`. (It also passes through any other props, too.)
+
+When a transformer is in use, the `index.js` is often adjusted to automatically make use of it. Using our button example, the `index.js` file would look something like this:
+
+```jsx
+import React from "react"
+
+import Component from "./component"
+import fixtures from "./fixtures"
+import transform from "./transformer"
+
+const Button = props => <Component {...transform(props)} />
+
+export default Button
+
+export { Component as component, fixtures, transform as transformer }
+```
+
+Now, both of these examples would work:
+
+```jsx
+import Button from "@src/components/button"
+
+<Button to="/">Go Home</Button>
+<Button url="/" label="Go Home" />
+```
 
 ## Sharing Components & Subcomponents
 
