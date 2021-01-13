@@ -95,7 +95,7 @@ In general, though, you can learn about [our approach to data architecture here]
 
 Here are the plugins that bring the data to life:
 
-- Data Importer: This is the CMS engine that imports data from various content management systems, normalizes it, then writes it to markdown files. **This is currently a work-in-progress.**
+- Data Importer: This is the CMS engine that imports data from various content management systems, normalizes it, then writes it to markdown files.
 - [Schema](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-schema): One of the most annoying scenarios in working with markdown files in a Gatsby project is when you use GraphQL to query for a key-value pair that doesn't exist or is a different type/shape than expected. Type inference is a big part of the magic of Gatsby's GraphQL engine, but it can cause problems. The schema plugin provides a DSL for writing out the entire data schema in one a single source of truth.
 - [Remark Ample](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-remark-ample): This is far and away the most complex piece of this entire ecosystem. It is built on top of [gatsby-transformer-remark](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/), but provides a cleaner way to work with data abstracted from markdown source files. It, in large part, relies on gatsby-ample-schema, though it could _technically_ function without it.
 - [Pages](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-pages): This plugin sets up the [Flexible Page Model](http://localhost:8000/code/data-architecture/#the-flexible-page-model), along with one structured page type. It relies on gatsby-remark-ample.

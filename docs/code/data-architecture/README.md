@@ -54,10 +54,6 @@ To support this approach, we built an Import Engine. The engine is responsible f
 
 The engine has various drivers, where a driver is responsible for a single data source. Therefore, when we run into a project that requires a new data source, we write the logic once and then it should just work.
 
-:::warning
-This feature is currently a work-in-progress for the Starter Kit. It has not yet been used in production.
-:::
-
 This approach was presented in Sean's Next.js Conf talk. Check it out if you'd like to understand more about the theory:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9j9bxDf428o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
