@@ -15,9 +15,9 @@ The information to follow is written specifically about the Gatsby Starter Kit.
 
 ## History
 
-The Starter Kit began as a way to avoid the annoyance of starting from scratch every time. At first it provided the base-level tooling we used on a project — test suite, Prettier config, linting, etc.
+The Starter Kit began as a way to avoid the annoyance of starting from scratch every time. At first, it provided the base-level tooling we used on a project — test suite, Prettier config, linting, etc.
 
-After a couple projects with multiple developers, we quickly realized that, without a convention, each of us builds components in a very different way. Having to jump between projects meant getting used to the codebase every time. But if we could build a convention such that the shape of every project was similar, then it would be trivial to jump between projects. All you'd have to do is learn the system once and it would transfer relatively easily to other projects built from the Starter.
+After a couple of projects with multiple developers, we quickly realized that, without a convention, each of us builds components in a very different way. Having to jump between projects meant getting used to the codebase every time. But if we could build a convention such that the shape of every project was similar, then it would be trivial to jump between projects. All you'd have to do is learn the system once and it would transfer relatively easily to other projects built from the Starter.
 
 And thus, the Starter Kit started to become more of an engine. It led us to define not just how we write code, but how we work together to bring designs to life on screen.
 
@@ -49,7 +49,7 @@ Therefore, we've written this code to be as modular as possible. In a Gatsby pro
 
 ### Single Source of Truth
 
-The Starter Kit is a monorepo. That means all the code we've written for it lives in a single repository. This makes it easier to manage issues and the code. But more importantly, it reduces dependencies across projects. Once the Starter Kit is copied to begin a project, all of its _Ample-developed_ dependencies (_plugins_) are locked in place for that project. That means you're free to make changes to those plugins to suit the project.
+The Starter Kit is a monorepo. That means all the code we've written for it lives in a single repository. This makes it easier to manage issues and code. But more importantly, it reduces dependencies across projects. Once the Starter Kit is copied to begin a project, all of its _Ample-developed_ dependencies (_plugins_) are locked in place for that project. That means you're free to make changes to those plugins to suit the project.
 
 ### Consistent Code Structure
 
@@ -78,7 +78,7 @@ Out of the box, there is support for the following:
 
 ### Utilities
 
-There are a couple utilities to help make your life a little less annoying as a developer:
+There are a couple of utilities to help make your life a little less annoying as a developer:
 
 - [Debugger](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-debuggers): Tools to help you debug styles on the front-end.
 - [Component Generator](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-generator): A command-line tool that provides a base set of files when creating a new component.
@@ -88,16 +88,16 @@ There are a couple utilities to help make your life a little less annoying as a 
 Much of the magic that happens within the Starter Kit has to do with the process of importing content into a normalized source, and then loading and transforming that source into the front-end code.
 
 :::tip
-Many of these plugins work together to build a cohesive experience. While we've worked to make them less inter-dependent, then are somewhat interwoven. It's important to understand the role of each, so that if you want to rip one out or adjust it, you know what else you may affect along the way.
+Many of these plugins work together to build a cohesive experience. While we've worked to make them less inter-dependent, they are somewhat interwoven. It's important to understand the role of each so that if you want to rip one out or adjust it, you know what else you may affect along the way.
 :::
 
 In general, though, you can learn about [our approach to data architecture here](/code/data-architecture/).
 
 Here are the plugins that bring the data to life:
 
-- Data Importer: This is the CMS engine that imports data from various content management systems, normalizes it, then writes it to markdown files.
-- [Schema](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-schema): One of the most annoying scenarios in working with markdown files in a Gatsby project is when you use GraphQL to query for a key-value pair that doesn't exist or is a different type/shape than expected. Type inference is a big part of the magic of Gatsby's GraphQL engine, but it can cause problems. The schema plugin provides a DSL for writing out the entire data schema in one a single source of truth.
-- [Remark Ample](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-remark-ample): This is far and away the most complex piece of this entire ecosystem. It is built on top of [gatsby-transformer-remark](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/), but provides a cleaner way to work with data abstracted from markdown source files. It, in large part, relies on gatsby-ample-schema, though it could _technically_ function without it.
+- Data Importer: This is the CMS engine that imports data from various content management systems, normalize it, then writes it to markdown files.
+- [Schema](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-schema): One of the most annoying scenarios in working with markdown files in a Gatsby project is when you use GraphQL to query for a key-value pair that doesn't exist or is a different type/shape than expected. Type inference is a big part of the magic of Gatsby's GraphQL engine, but it can cause problems. The schema plugin provides a DSL for writing out the entire data schema in one single source of truth.
+- [Remark Ample](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-remark-ample): This is far and away from the most complex piece of this entire ecosystem. It is built on top of [gatsby-transformer-remark](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/) but provides a cleaner way to work with data abstracted from markdown source files. It, in large part, relies on gatsby-ample-schema, though it could _technically_ function without it.
 - [Pages](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-pages): This plugin sets up the [Flexible Page Model](http://localhost:8000/code/data-architecture/#the-flexible-page-model), along with one structured page type. It relies on gatsby-remark-ample.
 - [Redirects](https://github.com/ample/gatsby-starter-ample/tree/main/plugins/gatsby-ample-redirects): We always seem to need redirects, so we have them set up by default.
 
@@ -130,8 +130,8 @@ Jeff owns this repo, though it is every developer's responsibility to contribute
 
 - [Logging issues](https://github.com/ample/gatsby-starter-ample/issues) when you find them.
 - [Adding a discussion](https://github.com/ample/gatsby-starter-ample/discussions) when you have a new idea.
-- Contributing to discussions when you have an thought or opinion to share.
-- Knocking out issues when you have down time.
+- Contributing to discussions when you have a thought or opinion to share.
+- Knocking out issues when you have downtime.
 - If you have a question, first search issues, then log an issue. The more of a paper trail you can leave on GitHub, the better. It helps future developers.
 
 In general, we try to keep a list of issues and opportunities during a project and work them back into the Starter Kit **immediately following the project**. Otherwise, they tend to get lost.

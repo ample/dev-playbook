@@ -2,16 +2,16 @@
 
 [Component-driven development](https://www.seancdavis.com/blog/wtf-is-component-driven-development/) is a game-changing way to build websites, _if_ you do it right. Do it wrong and a project can quickly become a mess.
 
-But "right" is subjective, and _components_ can be interpreted in a number of different ways. Therefore, _the right way_ is no one, single, prescriptive way. The right way is one thing and one thing only: **_consistency_**.
+But "right" is subjective, and _components_ can be interpreted in several different ways. Therefore, _the right way_ is no one, single, prescriptive way. The right way is one thing and one thing only: **_consistency_**.
 
 By establishing a convention in which we work, we make it easier to jump gracefully from project to project. We aim to make the convention easy to understand and follow, while still being flexible enough to accommodate the unique scenarios our clients regularly present to us.
 
-What follows here is ... _a lot_. We've put a lot of thought into this approach (mostly through trial and error). And we've seen it work, though it continues to evolve over time. Like everything else at Ample, if you have a suggestion for a better approach, speak up. We're all ears.
+What follows here is ... _a lot_. We've put a lot of thought into this approach (mostly through trial and error). And we've seen it work, though it continues to evolve. Like everything else at Ample, if you have a suggestion for a better approach, speak up. We're all ears.
 
 :::info
 In the docs to follow, you'll notice that we follow two primary paradigms:
 
-- Convention over Configuration: We'll be more efficient if we can work consistently, rather than providing completely autonomy on every project. (Really we look for a balance between consistency and flexibility.)
+- Convention over Configuration: We'll be more efficient if we can work consistently, rather than providing complete autonomy on every project. (Really we look for a balance between consistency and flexibility.)
 - Single-Responsibility Principle: Everything should do one thing and do that thing well.
   :::
 
@@ -118,7 +118,7 @@ Transformers help solve a gap in parity between the data source and the componen
 <Button to="/">Go Home</Button>
 ```
 
-But `to` and `children` don't really make sense to most content editors. Instead, in our CMS schemas, we often use field names like `url` and `label` instead. That's where the transformer comes into play. It can take the incoming props, _transform_ them, and then return props that the component expects.
+But `to` and `children` don't make sense to most content editors. In our CMS schemas, we often use field names like `url` and `label` instead. That's where the transformer comes into play. It can take the incoming props, _transform_ them, and then return props that the component expects.
 
 The button transformer might look something like this:
 
@@ -132,7 +132,7 @@ export default input => {
 }
 ```
 
-Notice that it passes `children` and `to` through if they exist, otherwise it falls back to `label` and `url`. (It also passes through any other props, too.)
+Notice that it passes `children` and `to` through if they exist, otherwise it falls back to `label` and `url`. (It passes through any other props, too.)
 
 When a transformer is in use, the `index.js` is often adjusted to automatically make use of it. Using our button example, the `index.js` file would look something like this:
 

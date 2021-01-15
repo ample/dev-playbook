@@ -2,9 +2,9 @@
 
 We began standardizing on the Jamstack in 2018. We spent the first year or so trying as many different CMS products as we could. We had trouble finding the perfect solution. But that quickly became a tiresome process, and the content team let us know about it. So we had to settle down.
 
-After more than a year of tinkering, we've standardized on how we approach data, while leaving the approach open to flexing when we ultimately have to solve a new and unique problem.
+After more than a year of tinkering, we've standardized on how we approach data while leaving the approach open to flexing when we ultimately have to solve a new and unique problem.
 
-This document first presents how we choose a CMS vendor. But, perhaps more importantly, it details how we craft the CMS experience to be both _flexible_ and _efficient_ for our editors, while maintaining as much parity as possible with our front-end code.
+This document first presents how we choose a CMS vendor. But, perhaps, more importantly, it details how we craft the CMS experience to be both _flexible_ and _efficient_ for our editors while maintaining as much parity as possible with our front-end code.
 
 ## Preferred Vendors
 
@@ -64,13 +64,9 @@ When it comes to architecting data within the chosen CMS product, we follow what
 
 If you are working with data on our projects, you should have a strong understanding of how this works. Being familiar with how [the Starter Kit](https://github.com/ample/gatsby-starter-ample) works is the ultimate goal. But we have an introductory blog post to get you started.
 
-:::warning
-TODO: Link to post is missing.
-:::
-
 ### Flexing Beyond the Flexible Page Model
 
-While we've had a lot of success here, the approach is still relatively new. There has been a lot of autonomy afforded to those running the data schema for the project. For now the guideline is to _use your best judgment_.
+While we've had a lot of success here, the approach is still relatively new. There has been a lot of autonomy afforded to those running the data schema for the project. For now, the guideline is to _use your best judgment_.
 
 Look at what we've done in the past. And as you can streamline the approach, refine and document it here.
 
