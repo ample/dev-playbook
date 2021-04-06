@@ -185,7 +185,7 @@ As much as possible, components should be named for what they are or what they d
 
 We're a little more particular about props:
 
-- Props keys use snake_case (e.g. `<MyComponent some_prop="value" />`). While this may seem awkward, it provides parity with the naming conventions of the CMS products we tend to use.
+- Props keys use camelCase (e.g. `<MyComponent someProp="value" />`).
 - The prop `theme` is used to designate variations on a component. This may help a component wrap itself in another component, passing the props down, or it may simply get passed to the stylesheet.
 - Options within a prop should also use snake_case. This is due to limitations with Sass and CSS Modules. For example, if `theme` is a prop and one option is a red outline, it should be `outline_red` (or `red_outline`).
 - When multiple words may work, stick with consistency. For example, if there is one main body of text for a component, call it `body` (as we've done in the starters), even when it may be _acting_ as a description.
