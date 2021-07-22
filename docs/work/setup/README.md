@@ -56,3 +56,4 @@ Most of our developers use a Mac. Please use the command line to install the fol
 - [Bear](https://apps.apple.com/us/app/bear/id1091189122?mt=12) - A beautiful, flexible writing app for crafting notes and prose.
 - [Copy Clip 2](https://apps.apple.com/us/app/copyclip-2-clipboard-manager/id1020812363?mt=12) - A lightning fast clipboard manager for your Mac.
 - [Muzzle](https://muzzleapp.com/) - A free app that silences incoming notifications during presentations and screen-sharing.
+- [CheatSheet](https://www.mediaatelier.com/CheatSheet/) - A Utility for learning shortcuts in all of your apps.
