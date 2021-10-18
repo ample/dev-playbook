@@ -57,6 +57,19 @@ module.exports = {
   },
   plugins: [
     [
+      "robots",
+      {
+        host: "https://playbook.helloample.com",
+        disallowAll: true,
+        policies: [
+          {
+            userAgent: "*",
+            disallow: ["/"],
+          }
+        ]
+      }
+    ],
+    [
       "vuepress-plugin-container",
       {
         type: "info",

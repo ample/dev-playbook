@@ -14,6 +14,7 @@
     "lint:fix": "markdownlint --fix docs/**/*.md"
   },
   "dependencies": {
-    "vuepress-plugin-code-copy": "^1.0.6"
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-robots": "^1.0.1"
   }
 }
