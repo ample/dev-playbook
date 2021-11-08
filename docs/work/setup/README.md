@@ -15,18 +15,18 @@ Here is a list of programs you are going to need to install:
 Most of our developers use a Mac. Please use the command line to install the following to set up your environment:
 
 - [Xcode dev tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/)
-  - `xcode-select —install`
+  - `xcode-select —-install`
 - [Homebrew](https://brew.sh/)
-  - `/bin/bash -c “$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)”`
+  - `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 - Generate a new [SSH key](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-  1. `ssh-keygen -t rsa -b 4096 -C “/your_email@example.com/“`
-  2. When you’re prompted to “Enter a file in which to save the key,” press Enter
+  1. `ssh-keygen -t rsa -b 4096 -C "/your_email@example.com/"`
+  2. When you’re prompted to "Enter a file in which to save the key," press Enter
   3. Then you will be asked add a secure passphrase
      `> Enter passphrase (empty for no passphrase): /[Type a passphrase]/`
      For more info on [SSH key passphrase](https://help.github.com/en/github/authenticating-to-github/working-with-ssh-key-passphrases) 4. Once you have generated your SSH key you need to add it to your GitHub in setting/keys
 - [Direnv](https://direnv.net/)
   1. `curl -sfL https://direnv.net/install.sh | bash`
-  2. `eval “$(direnv hook bash)”`
+  2. `eval "$(direnv hook bash)"`
 - [Nvm](https://github.com/creationix/nvm)
   - `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash`
 - [Rbenv](https://github.com/rbenv/rbenv)
@@ -34,11 +34,11 @@ Most of our developers use a Mac. Please use the command line to install the fol
   1. `brew install rbenv`
   2. `rbenv init`
   3. Close your terminal and open a new one
-  4. Verify that rbenv is properly set up using this [rbenv-doctor](https://github.com/rbenv/rbenv-installer/blob/master/bin/rbenv-doctor) script:
-     `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/master/bin/rbenv-doctor | bash`
+  4. Verify that rbenv is properly set up using this [rbenv-doctor](https://github.com/rbenv/rbenv-installer/blob/main/bin/rbenv-doctor) script:
+     `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
 
 - [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
-  - `sh -c “$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)”`
+  - `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
 ### Install Helpful VS Code Plugins (optional)
 
