@@ -60,7 +60,7 @@ At Ample, we like to visualize discreet bodies of work on a kanban board so we c
 Here are some examples of exit criteria for an individual user story... 
 
 * All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
-* Code must uphold professional standards, proper commenting, stylistic and naming conventions
+* Code must uphold [professional standards](/work/quality-assurance/#professional-standards), proper commenting, stylistic and naming conventions
 * Code review has been performed and approved by a peer; feedback has been provided and incorporated
 * Design requirements have been satisfied
 * Issues logged against the user story are triaged, resolved and retested
@@ -68,34 +68,40 @@ Here are some examples of exit criteria for an individual user story...
 * PR has been created in accordance to repo template guidelines; includes testing notes, link to deployment preview, etc.
 * Test suites and other CI integrations are passing successfully
 
-While teams are encouraged to influence the agreements themselves, the chief benefit of establishing and adhereing to exit criteria is to encourage more consistent, distributed ownership of the work at all stages of the project. Simply, it is not solely the QA person's responsibility to catch all the errors and maintain the quality of our codebase; this is the responsibility of each team member and meeting these standards over time requires constance vigilance. 
+While teams are encouraged to influence the agreements themselves, the chief benefit of establishing and adhereing to exit criteria is to encourage more consistent, distributed ownership of the work at all stages of the project. Simply, it is not solely the QA person's responsibility to catch all the errors and maintain the quality of our codebase; this is the responsibility of each team member and meeting these standards over time requires constant vigilance. 
 
 ### Professional Standards
 
-As the technologies we use have evolved over time and the relative skill and experience of each of us vary tremendouly, the standards we bring to the work we deliver will also vary. One person's standard of "good enough" may not meet the expectations of the team or the client so its our goal to define these standards over time. 
+As the technologies we use have evolved over time and the relative skill and experience of each of us vary tremendously, the standards we bring to the work we deliver will also vary. 
 
-When we say professional standards, we're referring to the level of finesse that would reflect positively on our organization if/when it is adopted or reviewed by an independent 3rd party. Consider the following baseline as examples of professional output... 
+One person's standard of "good enough" may not meet the expectations of the team or the client so its our goal to define &amp; evolve these standards over time. When we say "professional standards", we're referring to the level of finesse that would reflect positively on our organization if/when it is adopted or reviewed by an independent 3rd party. 
 
-* Your code should be "production ready"
+Consider the following baseline as examples of professional output... 
+
+* Your code should be ["production ready"](/work/quality-assurance/#production-ready)
 * There should be no console errors, logs or other debug artifacts
 * Basic SEO, accessibility and usability guidelines should be observed
+* Requests should return appropriate response codes
+* Pages should be accessible (unless of course, they should be inaccessible)
 * Forms should work
 * Images and other assets should be optimized
 * Unit tests should be passing
 
-Because there are so many factors that may contribute to quality output, this list is not exhaustive. While one person's standards are subjective, what is not subjective is that the code shipped reflects on our company, our values and our client's bottom line. Thus, the criteria for establishing what is "professional" is that we leave the code in a better place than we found it.
+Because there are so many factors that may contribute to quality output, this list is not exhaustive. 
+
+While one person's standards are subjective, what is not subjective is that the code shipped reflects on our company, our values and our client's bottom line. Thus, the criteria for establishing what is "professional" is that we leave the code in a better spot than we found it.
 
 ### Production Ready
 
 When you pick up a new story, the effort required to complete it usually takes a two-part, stepped approach. 
 
-**Step #1** is typically leaves the code in a "first draft" state. This is where developers explore options and strategies for meeting the story requirements while understanding that some portions require clean up, more attention to complexity, naming conventions, etc. The goal of Step #1 is to understand the task and how it might be accomplished. 
+**Step #1** typically leaves the code in a "first draft" state. This is where developers explore options and strategies for meeting the story requirements while understanding that some portions require clean up, more attention to detail, reduced complexity, improper naming conventions, etc. The goal of Step #1 is to understand the task and how it might be accomplished. 
 
 **Step #2** is getting that code ready to ship by refactoring and cleaning up the codebase so other developers can easily understand the business logic. This process is analagous to writing a term paper: you're revisiting the draft to provide a more coherent structure, proper adherence to conventions, etc. 
 
 Code may be considered "production ready" when it meets the following standards... 
 
-* Most obvious bugs are fixed
+* Obvious bugs are fixed
 * Code is well-structured and self-documenting
 * Automated Tests are written and have a sufficient level of coverage
 * Code has endured a peer review process before being merged
