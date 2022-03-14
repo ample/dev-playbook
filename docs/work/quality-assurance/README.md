@@ -55,20 +55,39 @@ The style of point values depends on the client and project. For clients using a
 
 Establishing reasonable expectations amongst a team is a critical aspect of working with a distributed group of individuals. The language we use to determine whether a story is ready to be reviewed is defined as "exit criteria" and describes the criteria or requirements which must be met to complete a specific task.
 
-At Ample, we like to visualize discreet bodies of work on a kanban board so we can quickly assess the status of that task (e.g. undergoing refinement, under development, currently being QA'd, etc.). We like think of exit criteria as the benchmark of things that need to happen before a story can move to the next swimlane. 
+At Ample, we like to visualize discrete bodies of work on a kanban board so we can quickly assess the status of that task (e.g. undergoing refinement, under development, currently being QA'd). Exit criteria is the benchmark of things that need to happen before a story can move to the next swimlane. 
 
-Here are some examples of exit criteria for an individual user story... 
+Default exit criteria for each swimline of an individual user story:
 
-* All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
-* Code must uphold [professional standards](/work/quality-assurance/#professional-standards), proper commenting, stylistic and naming conventions
-* Code review has been performed and approved by a peer; feedback has been provided and incorporated
-* Design requirements have been satisfied
-* Issues logged against the user story are triaged, resolved and retested
-* Unit tests have been written, integrated into the test suite and accurately cover work completed (where applicable)
-* PR has been created in accordance to repo template guidelines; includes testing notes, link to deployment preview, etc.
-* Test suites and other CI integrations are passing successfully
+* To Do (Team)
+  * Story has been refined into a sprintable chunk
+  * Acceptance criteria exists and makes sense
+  * Dependencies or other blockers have been identified
+  * Design assets are accessible (project added to Zeplin, etc)
+* In Progress (Dev)
+  * All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
+  * Code follows consistent naming conventions, is properly commented
+  * Design requirements have been satisfied
+  * QA issues logged against the user story are triaged, resolved and retested
+  * Test suites and other CI integrations are passing successfully (if they exist)
+  * PR has been created in accordance to repo template guidelines; includes testing notes, link to deployment preview, etc.
+* Code Review (Dev)
+  * Code changes approved by one or more peers
+  * Rendered output meets the design visually
+  * Code is merged into primary dev branch
+* Testing (QA)
+  * All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
+  * Rendered output meets the design visually
+  * CMS changes are reflected (if applicable)
+  * Functions properly and code passes all test cases across major devices & browsers
+  * Deploy preview is accessible, functional
+* Acceptance Review (ES / Team Lead)
+  * All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
+  * Strategic objectives are met
+  * Design meets Ample & consumer standards
+  * Client review is scheduled
 
-While teams are encouraged to influence the agreements themselves, the chief benefit of establishing and adhereing to exit criteria is to encourage more consistent, distributed ownership of the work at all stages of the project. Simply, it is not solely the QA person's responsibility to catch all the errors and maintain the quality of our codebase; this is the responsibility of each team member and meeting these standards over time requires constant vigilance. 
+While teams are encouraged to influence the agreements themselves, the chief benefit of establishing and adhereing to exit criteria is to encourage more consistent, distributed ownership of the work at all stages of the project. Simply, it is not solely the QA person's responsibility to catch all the errors and maintain the quality of our codebase; this is the responsibility of each team member, and meeting these standards over time requires constant vigilance. 
 
 ### Professional Standards
 
