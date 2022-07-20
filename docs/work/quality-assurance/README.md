@@ -53,35 +53,37 @@ The style of point values depends on the client and project. For clients using a
 
 ## Exit Criteria
 
-Establishing reasonable expectations amongst a team is a critical aspect of working with a distributed group of individuals. The language we use to determine whether a story is ready to be reviewed is defined as "exit criteria" and describes the criteria or requirements which must be met to complete a specific task.
+Establishing reasonable expectations amongst a team is a critical aspect of working with a distributed group of individuals. The language we use to determine whether a story is ready to be reviewed is defined as "exit criteria" and describes the criteria or requirements which must be met to complete a specific task. 
 
-At Ample, we like to visualize discrete bodies of work on a kanban board so we can quickly assess the status of that task (e.g. undergoing refinement, under development, currently being QA'd). Exit criteria is the benchmark of things that need to happen before a story can move to the next swimlane. 
+At Ample, we like to visualize discrete bodies of work on a kanban board so we can quickly assess the status of that task (e.g. undergoing refinement, in development, currently being QA'd). A project's exit criteria is the benchmark of things that need to happen before a story can move to the next swimlane. 
 
-Standard exit criteria for an individual user story to be moved into each swimline:
+Exit criteria may vary by team or by project, so please refer to your own team's process for yours. 
+
+Below are some example exit criteria for an individual user story:
 
 * **To Do** (Team)
   * Story has been refined into a sprintable chunk
   * Acceptance criteria exists and makes sense
   * Dependencies or other blockers have been identified
-  * Design assets are accessible (project added to Zeplin, etc)
-* **In Progress** (Dev)
+  * Design assets are accessible (project added to Zeplin, etc.)
+* **In Progress** (Developer)
   * All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
   * Code follows consistent naming conventions, is properly commented
   * Design requirements have been satisfied
   * QA issues logged against the user story are triaged, resolved and retested
   * Test suites and other CI integrations are passing successfully (if they exist)
   * PR has been created in accordance to repo template guidelines; includes testing notes, link to deployment preview, etc.
-* **Code Review** (Dev)
+* **Code Review** (Developer)
   * Code changes approved by one or more peers
   * Rendered output meets the design visually
   * Code is merged into primary dev branch
-* **Testing** (QA)
+* **Testing** (QA Engineer)
   * All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
   * Rendered output meets the design visually
   * CMS changes are reflected (if applicable)
   * Functions properly and code passes all test cases across major devices & browsers
   * Deploy preview is accessible, functional
-* **Acceptance Review** (ES / Team Lead)
+* **Acceptance Review** (Executive Sponsor / Product Owner)
   * All [acceptance criteria](/work/quality-assurance/#acceptance-criteria) has been addressed
   * Strategic objectives are met
   * Design meets Ample & consumer standards
