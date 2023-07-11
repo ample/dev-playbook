@@ -4,12 +4,12 @@
 
 Our success is derived from our ability to operate like a well-oiled machine. The only way we can achieve that is if we stay on the same page. In other words, communication is a core tenet to continuing to deliver with excellence.
 
-And as we've grown we've introduced several remote team members. About a quarter of our team are fully remote, while the others may be in or out of the office, depending on the day. This means we must be more diligent in communication.
+And as we've grown we've introduced several remote team members. Since much of our team is fully remote, we must be diligent in communication.
 
-As a result, Slack is base around which we maintain communication across our team. We follow these general guidelines:
+As a result, Slack is the base around which we maintain communication across our team. We follow these general guidelines:
 
 - Most code- or project-related conversations should begin in a channel. This provides more visibility into your work and will likely lead to you getting the best answer.
-- If you want to make sure _the entire company_ sees it, the [#general](https://helloample.slack.com/messages/general) channel is your best bet. For example, if you're usually in the office, but are going to be away, leave a note in #general.
+- If you want to make sure _the entire company_ sees it, the [#general](https://helloample.slack.com/messages/general) channel is your best bet.
 - For development questions use the [#developers](https://helloample.slack.com/messages/developers) channel. See below for guidelines.
 - Project-specific questions should go into the channel for that project's client.
 - We are all friendly. Feel free to reach out whether it's a question, update, or just to chat. The more you can get to know someone on your team, the better you'll operate when working on the same project.
@@ -25,7 +25,7 @@ The format we use is this:
 1. Raise your hand (:raised_hand: or :wave:).
 1. Provide context to your problem.
 1. Explain where you are stuck.
-1. Add any relevant details, like things you've already tried already.
+1. Add any relevant details, like things you've already tried.
 
 The first dev who thinks they can help reacts to the message with :eyes: to indicate they are looking into it (so we don't duplicate efforts). If that dev gets stuck, they should note it in a thread to the original message, adding any necessary details.
 
@@ -37,17 +37,17 @@ Generally speaking, we recommend you work on your issue for 30-60 minutes before
 
 ## Task Management
 
-We use [Paymo](https://www.paymoapp.com/) to manage the majority of our project-based tasks and to track time. (See the next section for time tracking.) Depending on the client there may be another tool as well.
+We use [Asana](https://app.asana.com/) to manage the majority of our project-based tasks. Depending on the client there may be another tool as well.
 
-### Ample's Process (Paymo)
+### Ample's Process (Asana)
 
-We use Paymo following [Kanban](https://en.wikipedia.org/wiki/Kanban) principles. Each task is represented in Paymo as a card. A card moves through the board following this flow:
+We use Asana following [Kanban](https://en.wikipedia.org/wiki/Kanban) principles. Each task is represented in Asana as a card. A card moves through the board following this flow:
 
 1. Cards in **Backlog** may still need details or are waiting on something.
-1. After the card has everything it needs to start it will be moved into **To Do**. Cards in this column are ready to be worked. Depending on the project, they may already be assigned to you or you will be instructed to pick any of the cards.
-1. Once you've started working on a task move the card over to **In Progress**.
-1. When you have a PR ready for review move it to **Internal Review** and comment on the card with a link to the PR(s).
-1. That will prompt the tech lead (or another dev) on the project to review your code. If they approve and merge it, they will then move it to **Testing**, to be tested by QA (a PM). If the code was not ready to be merged, the developer will leave a comment on your PR, comment on the Paymo with a link to their GitHub comment(s), and move the card back to **In Progress**.
+1. After the card has everything it needs to start, it will be moved into **To Do**. Cards in this column are ready to be worked. Depending on the project, they may already be assigned to you or you will be instructed to pick any of the cards.
+1. Once you've started working on a task, move the card over to **In Progress**.
+1. When you have a PR ready for review, move it to **Code Review** and comment on the card with a link to the PR(s).
+1. That will prompt the tech lead (or another dev) on the project to review your code. If they approve and merge it, they will then move it to **Testing**, to be tested by QA (a PM). If the code was not ready to be merged, the developer will leave a comment on your PR, comment on the Asana with a link to their GitHub comment(s), and move the card back to **In Progress**.
 1. Once the result of the task is tested (if necessary), it will be moved **Client Review**. If there were defects, the PM may choose to create a new card, or may move the original card back to **To Do** with comments.
 1. If necessary, the client may review the task. They will communicate with the PM and the PM will handle moving the card as necessary.
 1. The appropriate party (either your tech lead or PM) will move the card into the **Complete** column after the task is considered complete.
@@ -57,12 +57,12 @@ We use Paymo following [Kanban](https://en.wikipedia.org/wiki/Kanban) principles
 A few examples of systems you may encounter are below. For each one of these, they have differences like column names, PR steps, review steps, etc. However, the overall steps of work will be much the same.
 
 - [Rally](https://rally1.rallydev.com/)
-- [Asana](https://app.asana.com/)
+- [Wrike](https://www.wrike.com/)
 - [Jira](https://jira.atlassian.com/)
 
 ## Time Tracking
 
-All time tracking happens in Paymo. **You are required to have all time in by the end of the week.** It should be the last thing you do every week, no matter what. The exception to this rule is that time must also be in **by the end of the month**. In other words, make it a habit to log your time every day and no one will bug you about it.
+All time tracking happens in [Harvest](https://ample.harvestapp.com/time). **You are required to have all time in by the end of the week.** It should be the last thing you do every week, no matter what. The exception to this rule is that time must also be in **by the end of the month**. In other words, make it a habit to log your time every day and no one will bug you about it.
 
 :::tip
 Many find it helpful to log time every day. It's much easier to remember what you did on the same day you did it. Logging once a week can be a time-consuming task.
@@ -83,13 +83,13 @@ Our expectations are that:
 
 In other words, **it's more important that you're accurate, produce good work, and meet your deadlines than it is that your timesheets read a certain number**. Some weeks they will say 35, and some weeks they may say 45. The resourcing team works to keep you at or below 40 as an average over time.
 
-And when we say "accurate" we don't mean _down to the minute_. We round entries up to 15-minute increments anyways, so as long as your rounding to the closest 15 minutes, you're being plenty accurate.
+And when we say "accurate" we don't mean _down to the minute_. We round entries up to 15-minute increments anyways, so as long as you're rounding to the closest 15 minutes, you're being plenty accurate.
 
 ### Billing Internal Time
 
 Some teams only track their client work. The dev team tracks 100% of the time we spend, including internal projects. We have a series of internal tasks and projects always running, and you will typically have some internal task to work on each week. We're also fortunate enough to have an abundance of social events which you can also add to your timesheet.
 
-There are two internal projects which you can track time against — Ample Internal and Ample Dev Projects. Ample Internal are company-level tasks, while Ample Dev Projects are specific to the projects our dev team manages, such as this playbook!
+There is an internal project which you can track time against — Ample Internal. Ample Internal comprises company-level tasks as well as most projects our dev team manages, such as this playbook!
 
 In billing 100% of your time, there can be some grey areas in terms of where your time should go. Here are some general guidelines:
 
@@ -103,7 +103,7 @@ In billing 100% of your time, there can be some grey areas in terms of where you
 
 [Standup meetings](https://en.wikipedia.org/wiki/Stand-up_meeting) are an [agile](https://en.wikipedia.org/wiki/Agile_software_development) process for updating the team on the status of your work.
 
-Every morning except Mondays, we have daily standup on Zoom. ([Here is the meeting link](https://helloample.slack.com/archives/CD7LF9KQW/p1584476740034500).) This is a quick meeting for everyone to outline the work they have planned for today and if you have any blockers.
+Each team has a daily standup on Zoom. This is a quick meeting for everyone to outline the work they have planned for today and if you have any blockers.
 
 Tips for this meeting:
 
@@ -112,7 +112,7 @@ Tips for this meeting:
 - Don't forget to call out successes, too! This doesn't just have to be about what you didn't do.
 - This can also a good time to let anyone else know if you have PRs waiting to be reviewed or if you've left someone else feedback.
 
-Every Monday we have a longer standup meeting which we call _Status_. It's an all-hands meeting that beings with a list of what we expect each team member to work on throughout the week. We then look at the schedule for client meetings for the week, and list team-level announcements. Following that, most leave the meeting, while the PM and leadership teams stick around to walk through each current project and new business opportunity.
+Every Friday we have an all-hands meeting that includes team-level updates and announcements.
 
 ## Pair Programming
 
